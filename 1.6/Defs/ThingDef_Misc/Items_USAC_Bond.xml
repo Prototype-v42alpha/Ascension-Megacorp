@@ -11,7 +11,7 @@
     <!-- USAC Credit Bond -->
     <ThingDef ParentName="ResourceBase">
         <defName>USAC_Bond</defName>
-        <label>USAC credit bond</label>
+        <label>credit bond</label>
         <description>Special fiber-reinforced paper certificates issued by USAC corporate distributors. Registered and useless to other factions.</description>
         <graphicData>
             <texPath>Things/Item/Special/USAC_Bond</texPath>

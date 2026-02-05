@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ArmorHelmetMakeableBase" Name="USAC_ArmorBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <recipeMaker Inherit="false" />
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <apparel>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <tradeTags>
+      <li>USAC_Armor</li>
+    </tradeTags>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.4,0.3,0.15)</only>
+        </li>
+        <li>
+          <weight>15</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.5,0.5,0.5)</min>
+          <max>(1,1,1)</max>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="USAC_ArmorBase" Name="USAC_HelmetBase" Abstract="True">
+    <costStuffCount>25</costStuffCount>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Plasteel>50</Plasteel>
+    </costList>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>USAC_Helmet</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="USAC_HelmetBase">
+    <defName>USAC_Apparel_AssaultHelmet</defName>
+    <label>Assault helmet</label>
+    <description>todo</description>
+    <graphicData>
+      <texPath>Things/Apparel/AssaultHelmet/Icon</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>1.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.18</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.18</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.75</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <AimingDelayFactor>-0.1</AimingDelayFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Apparel/AssaultHelmet/headgear</wornGraphicPath>
+      <tags>
+        <li>USAC_HelmetAssault</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="USAC_HelmetBase">
+    <defName>USAC_Apparel_HeavyHelmet</defName>
+    <label>Heavy helmet</label>
+    <description>todo</description>
+    <graphicData>
+      <texPath>Things/Apparel/HeavyHelmet/Icon</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>1.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.18</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.18</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.75</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <AimingAccuracy MayRequire="ceteam.combatextended">-0.3</AimingAccuracy>
+      <AimingDelayFactor>0.3</AimingDelayFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Apparel/HeavyHelmet/headgear</wornGraphicPath>
+      <tags>
+        <li>USAC_HelmetHeavy</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="USAC_HelmetBase">
+    <defName>USAC_Apparel_MeleeHelmet</defName>
+    <label>Gladiator helmet</label>
+    <description>todo</description>
+    <graphicData>
+      <texPath>Things/Apparel/MeleeHelmet/Icon</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>1.15</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.18</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.18</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.75</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Apparel/MeleeHelmet/headgear</wornGraphicPath>
+      <tags>
+        <li>USAC_HelmetMelee</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="USAC_HelmetBase">
+    <defName>USAC_Apparel_NightVisionHelmet</defName>
+    <label>Night vision helmet</label>
+    <description>todo</description>
+    <graphicData>
+      <texPath>Things/Apparel/NightHelmet/Icon</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>1.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.18</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.18</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.75</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Apparel/NightHelmet/headgear</wornGraphicPath>
+      <tags>
+        <li>USAC_HelmetNV</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+</Defs>

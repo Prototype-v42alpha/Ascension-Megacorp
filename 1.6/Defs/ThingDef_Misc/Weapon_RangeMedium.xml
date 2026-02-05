@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>USAC_Bullet_GrenadeRound</defName>
+    <label>programmable shaped charge</label>
+    <thingClass>Fortified.Projectile_ConeExplosive</thingClass>
+    <projectile>
+      <speed>40</speed>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <explosionRadius>1.6</explosionRadius>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
+      <arcHeightFactor>0.5</arcHeightFactor>
+      <shadowSize>0.6</shadowSize>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(255,255,255)</color>
+    </graphicData>
+    <modExtensions>
+      <li Class="Fortified.ExplosiveExtension">
+        <damage>Bullet</damage>
+        <damageAmount>10</damageAmount>
+        <armorPen>0</armorPen>
+        <preExplosionOffset>2</preExplosionOffset>
+        <range>4</range>
+        <swayAngle>60</swayAngle>
+        <doVisualEffects>false</doVisualEffects>
+        <sound>Explosion_Rocket</sound>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="USAC_BaseGun">
+    <defName>USAC_Gun_BattleRifle</defName>
+    <label>Advanced battle rifle</label>
+    <description>M29 "SABR", an infantry weapon platform integrated automatic rifle and grenade launcher, capable of both direct fire suppression and indirect fire support. Although heavy, it boasts excellent aiming accuracy, making it ideal for use as a gunner's weapon in small units.</description>
+    <weaponClasses>
+      <li>LongShots</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>USAC_OICW</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/USAC_Gun_BattleRifle</texPath>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>5.9</Mass>
+      <AccuracyTouch>0.69</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.91</AccuracyMedium>
+      <AccuracyLong>0.89</AccuracyLong>
+      <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedStatOffsets>
+      <HuntingStealth>0.2</HuntingStealth>
+      <MoveSpeed>-0.15</MoveSpeed>
+      <ShootingAccuracyPawn>0.8</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>PrecisionRifling</li>
+        <li>DMS_EquipmentAdvanced</li>
+      </researchPrerequisites>
+    </recipeMaker>
+    <costList>
+      <Plasteel>75</Plasteel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>USAC_Bullet_FullPowerRifle</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <range>34.9</range>
+        <soundCast>USAC_Gun_Shot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps Inherit="false">
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>DMSAC_GrenadeLauncher</abilityDef>
+        <maxCharges>5</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>grenade charge</chargeNoun>
+        <ammoDef>ComponentIndustrial</ammoDef>
+        <ammoCountPerCharge>2</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Styleable" />
+      <li Class="CompProperties_Biocodable" />
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+        <def>MF_StandardMuzzleFalsh</def>
+        <drawSize>(0.3,0.3)</drawSize>
+        <offsets>
+          <li>(0.65,0)</li>
+        </offsets>
+      </li>
+      <li Class="Fortified.HeavyEquippableExtension">
+        <EquippableDef>AverageHumanCanUse</EquippableDef>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

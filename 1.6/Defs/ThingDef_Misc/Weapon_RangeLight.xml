@@ -70,6 +70,10 @@
       <AccuracyLong>0.89</AccuracyLong>
       <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
     </statBases>
+    <equippedStatOffsets>
+      <HuntingStealth>0.1</HuntingStealth>
+      <ShootingAccuracyPawn>0.3</ShootingAccuracyPawn>
+    </equippedStatOffsets>
     <costList>
       <Plasteel>60</Plasteel>
       <ComponentIndustrial>4</ComponentIndustrial>
@@ -131,6 +135,10 @@
       <AccuracyLong>0.46</AccuracyLong>
       <RangedWeapon_Cooldown>1.55</RangedWeapon_Cooldown>
     </statBases>
+    <equippedStatOffsets>
+      <HuntingStealth>0.1</HuntingStealth>
+      <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+    </equippedStatOffsets>
     <costList>
       <Plasteel>75</Plasteel>
       <ComponentIndustrial>5</ComponentIndustrial>
@@ -194,6 +202,10 @@
       <AccuracyLong>0.95</AccuracyLong>
       <RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
     </statBases>
+    <equippedStatOffsets>
+      <HuntingStealth>0.15</HuntingStealth>
+      <ShootingAccuracyPawn>0.7</ShootingAccuracyPawn>
+    </equippedStatOffsets>
     <costList>
       <Plasteel>65</Plasteel>
       <ComponentIndustrial>7</ComponentIndustrial>

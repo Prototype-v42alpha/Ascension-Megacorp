@@ -34,7 +34,7 @@
       <li Class="USAC.CompProperties_MechWreck">
         <wreckDef>USAC_Wreck_Rocky</wreckDef>
       </li>
-      <li Class="Fortified.CompProperties_MechApparel"/>
+      <li Class="Fortified.CompProperties_MechApparel" />
     </comps>
     <modExtensions>
       <li Class="Fortified.ModExtension_MechCapsule" />
@@ -64,8 +64,7 @@
     </butcherProducts>
   </ThingDef>
 
-  <PawnKindDef ParentName="USAC_BaseMechKind">
-    <defName>USAC_Mech_Rocky</defName>
+  <PawnKindDef ParentName="USAC_BaseMechKind" Name="USAC_BaseRockyKind" Abstract="true">
     <label>M88 Rocky</label>
     <race>USAC_Mech_Rocky</race>
     <combatPower>80</combatPower>
@@ -83,18 +82,92 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
+    <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(192, 175, 158)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="USAC_BaseRockyKind">
+    <defName>USAC_Mech_Rocky</defName>
     <apparelTags>
-      <li>IndustrialBasic</li>
-      <li>IndustrialMilitaryBasic</li>
-      <li>IndustrialMilitaryAdvanced</li>
+      <li>USAC_HelmetAssault</li>
+      <li MayRequire="Aoba.DeadManSwitch.Core">DMS_Tactical</li>
     </apparelTags>
     <apparelMoney>800~1500</apparelMoney>
-    <apparelAllowHeadgearChance>0.3</apparelAllowHeadgearChance>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
     <weaponTags>
-      <li>SimpleGun</li>
       <li>IndustrialGunAdvanced</li>
     </weaponTags>
-    <weaponMoney>500~1500</weaponMoney>
+    <weaponMoney>1000~2500</weaponMoney>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="USAC_BaseRockyKind">
+    <defName>USAC_Mech_Rocky_AR</defName>
+    <apparelTags>
+      <li>USAC_HelmetMelee</li>
+      <li>USAC_HelmetAssault</li>
+      <li MayRequire="Aoba.DeadManSwitch.Core">DMS_Tactical</li>
+    </apparelTags>
+    <apparelMoney>800~1500</apparelMoney>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <weaponTags>
+      <li>USAC_AR</li>
+    </weaponTags>
+    <weaponMoney>1000~2500</weaponMoney>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="USAC_BaseRockyKind">
+    <defName>USAC_Mech_Rocky_LMG</defName>
+    <apparelTags>
+      <li>USAC_HelmetHeavy</li>
+      <li>USAC_HelmetAssault</li>
+      <li MayRequire="Aoba.DeadManSwitch.Core">DMS_Tactical</li>
+    </apparelTags>
+    <apparelMoney>800~1500</apparelMoney>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <weaponTags>
+      <li>USAC_LMG</li>
+    </weaponTags>
+    <weaponMoney>1000~2500</weaponMoney>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="USAC_BaseRockyKind">
+    <defName>USAC_Mech_Rocky_DMR</defName>
+    <apparelTags>
+      <li>USAC_HelmetNV</li>
+      <li>USAC_HelmetAssault</li>
+      <li MayRequire="Aoba.DeadManSwitch.Core">DMS_Tactical</li>
+    </apparelTags>
+    <apparelMoney>800~1500</apparelMoney>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <weaponTags>
+      <li>USAC_DMR</li>
+    </weaponTags>
+    <weaponMoney>1000~2500</weaponMoney>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="USAC_BaseRockyKind">
+    <defName>USAC_Mech_Rocky_Heavy</defName>
+    <apparelTags>
+      <li>USAC_HelmetNV</li>
+      <li>USAC_HelmetAssault</li>
+      <li MayRequire="Aoba.DeadManSwitch.Core">DMS_Tactical</li>
+    </apparelTags>
+    <apparelMoney>800~1500</apparelMoney>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <weaponTags>
+      <li>USAC_OICW</li>
+      <li MayRequire="Aoba.DeadManSwitch.Core">A_BR_LongRifle</li>
+    </weaponTags>
+    <weaponMoney>1000~2500</weaponMoney>
   </PawnKindDef>
 
   <!-- ==================== M939 "Paraman" ==================== -->
@@ -218,7 +291,7 @@
 
   <PawnKindDef ParentName="USAC_BaseMechKind">
     <defName>USAC_Mech_Gonk</defName>
-    <label>X-3 Gonk</label>
+    <label>XM3 Gonk</label>
     <race>USAC_Mech_Gonk</race>
     <combatPower>420</combatPower>
     <isBoss>true</isBoss>
@@ -411,7 +484,7 @@
           <texPath>Things/Mech/omaha</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3.5</drawSize>
+          <drawSize>4</drawSize>
           <shadowData>
             <volume>(1.25,1,1.25)</volume>
             <offset>(0,0,-0.5)</offset>

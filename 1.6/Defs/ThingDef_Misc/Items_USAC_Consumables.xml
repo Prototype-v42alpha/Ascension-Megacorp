@@ -5,18 +5,18 @@
   <ThingDef ParentName="ResourceBase">
     <defName>USAC_DisposableBattery</defName>
     <label>disposable battery</label>
-    <description>A circular disposable battery designed to rapidly charge mechanoids. To prevent safety hazards from unauthorized modification, it is designed to short-circuit and self-destruct after a single use.</description>
+    <description>A disposable battery designed to rapidly charge mechanoids. To prevent safety hazards from unauthorized modification, it is designed to short-circuit and self-destruct after a single use.</description>
     <graphicData>
       <texPath>Things/Item/Special/USAC_Battery</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
-    <stackLimit>25</stackLimit>
+    <stackLimit>10</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
-      <MarketValue>150</MarketValue>
+      <MarketValue>500</MarketValue>
       <Mass>0.2</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2.0</DeteriorationRate>
@@ -57,11 +57,11 @@
     </graphicData>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
-    <stackLimit>25</stackLimit>
+    <stackLimit>10</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
-      <MarketValue>200</MarketValue>
+      <MarketValue>250</MarketValue>
       <Mass>0.3</Mass>
       <Flammability>0.5</Flammability>
       <DeteriorationRate>2.0</DeteriorationRate>

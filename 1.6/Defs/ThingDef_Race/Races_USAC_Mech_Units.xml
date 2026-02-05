@@ -24,11 +24,11 @@
       <li>ITab_Pawn_Log</li>
     </inspectorTabs>
     <race>
-      <body>USAC_Humanoid_Soldat</body>
+      <body>USAC_Synthroid</body>
       <baseBodySize>1.0</baseBodySize>
       <baseHealthScale>1.0</baseHealthScale>
       <mechWeightClass>Medium</mechWeightClass>
-      <renderTree>HumanlikeMech</renderTree>
+      <renderTree>USAC_HumanlikeMech</renderTree>
     </race>
     <comps>
       <li Class="USAC.CompProperties_MechWreck">
@@ -46,12 +46,7 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.4</drawSize>
         </headGraphic>
-        <headGraphicHaired>
-          <texPath>Things/Mech/rockyHead_Bald</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.4</drawSize>
-        </headGraphicHaired>
-        <headOffset>(0,0,-0.05)</headOffset>
+        <headOffset>(0,0,0)</headOffset>
       </li>
       <li Class="Fortified.MechWeaponExtension">
         <EnableWeaponFilter>false</EnableWeaponFilter>
@@ -81,7 +76,7 @@
           <texPath>Things/Mech/rocky</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.4</drawSize>
+          <drawSize>1.5</drawSize>
           <shadowData>
             <volume>(0.6, 0.8, 0.6)</volume>
           </shadowData>
@@ -147,7 +142,7 @@
           <texPath>Things/Mech/paraman</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2.75</drawSize>
+          <drawSize>1.75</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -161,7 +156,7 @@
   <!-- ==================== X-3 "Gonk" ==================== -->
   <ThingDef ParentName="USAC_BaseQuadMech">
     <defName>USAC_Mech_Gonk</defName>
-    <label>X-3 "Gonk"</label>
+    <label>XM3 "Gonk"</label>
     <description>A heavy self-propelled artillery mech with tank-level armor, very slow movement, and extreme long-range firepower. Based on the geochelone chassis.</description>
     <statBases>
       <MoveSpeed>2.5</MoveSpeed>
@@ -195,6 +190,25 @@
       <li Class="USAC.CompProperties_MechWreck">
         <wreckDef>USAC_Wreck_Gonk</wreckDef>
       </li>
+      <li Class="Fortified.CompProperties_VehicleWeapon">
+        <drawData>
+          <dataEast>
+            <offset>(0.2,0,-0.3)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.2,0,0.6)</offset>
+            <layer>-20</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(-0.9,0,0)</offset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.9,0,0)</offset>
+          </dataNorth>
+        </drawData>
+        <turretRotationFollowPawn>true</turretRotationFollowPawn>
+        <rotationSmoothTime>0.05</rotationSmoothTime>
+      </li>
     </comps>
     <butcherProducts>
       <Steel>60</Steel>
@@ -214,7 +228,7 @@
           <texPath>Things/Mech/gonk</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2.75</drawSize>
+          <drawSize>2.5</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -253,6 +267,24 @@
     <comps>
       <li Class="USAC.CompProperties_MechWreck">
         <wreckDef>USAC_Wreck_Cobalt</wreckDef>
+      </li>
+      <li Class="Fortified.CompProperties_VehicleWeapon">
+        <drawData>
+          <dataEast>
+            <offset>(0.5,0,0.3)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.5,0,0.3)</offset>
+          </dataWest>
+          <dataSouth>
+            <offset>(0,0,-0.3)</offset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0,0,0.4)</offset>
+          </dataNorth>
+        </drawData>
+        <turretRotationFollowPawn>true</turretRotationFollowPawn>
+        <rotationSmoothTime>0.05</rotationSmoothTime>
       </li>
     </comps>
     <butcherProducts>
@@ -341,6 +373,25 @@
       <li Class="USAC.CompProperties_MechWreck">
         <wreckDef>USAC_Wreck_Omaha</wreckDef>
       </li>
+      <li Class="Fortified.CompProperties_VehicleWeapon">
+        <drawData>
+          <dataEast>
+            <offset>(0.2,0,-0.4)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.2,0,1)</offset>
+            <layer>-20</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(-1,0,0)</offset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(1,0,0.2)</offset>
+          </dataNorth>
+        </drawData>
+        <turretRotationFollowPawn>true</turretRotationFollowPawn>
+        <rotationSmoothTime>0.05</rotationSmoothTime>
+      </li>
     </comps>
     <butcherProducts>
       <Steel>80</Steel>
@@ -360,7 +411,7 @@
           <texPath>Things/Mech/omaha</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>4.2</drawSize>
+          <drawSize>3.5</drawSize>
           <shadowData>
             <volume>(1.25,1,1.25)</volume>
             <offset>(0,0,-0.5)</offset>

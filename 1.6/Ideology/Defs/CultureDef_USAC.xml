@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <!-- USAC 企业文化 -->
-    <CultureDef>
+    <CultureDef MayRequire="ludeon.rimworld.ideology">
         <defName>USAC_Culture</defName>
-        <label>USAC corporate</label>
-        <description>TODO</description>
+        <label>Zenith Ascension</label>
+        <description>Zenith Ascension is a military-industrial complex under the United Stellar Armament Company, whose core business is coordinating military development projects across various technical departments and selling arms abroad.\n\nDespite its impressive financial statements, it harbors a vast network of bribery and cronyism. which does not prevent their capability to physically eliminating and annexing competitor's assets and running their privateering fleets to monopolizing the arms market through money-for-power deals.</description>
         <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeo_USAC</ideoNameMaker>
         <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeity_USAC</deityNameMaker>
         <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMaker_USAC</deityTypeMaker>
@@ -18,6 +18,16 @@
             <li>OriginSpacer</li>
         </allowedPlaceTags>
         <iconPath>World/WorldObjects/Expanding/USAC_Icon</iconPath>
+        <thingStyleCategories>
+            <li>
+                <category>USAC_Segments</category>
+                <priority>1</priority>
+            </li>
+            <li MayRequire="aoba.deadmanswitch.core">
+                <category>DMS_Industrial</category>
+                <priority>2</priority>
+            </li>
+        </thingStyleCategories>
         <styleItemTags>
             <li>
                 <tag>Urban</tag>

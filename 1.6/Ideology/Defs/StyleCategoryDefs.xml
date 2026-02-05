@@ -4,7 +4,7 @@
   <!-- F*** YOU SEGMENTS -->
   <StyleCategoryDef>
     <defName>USAC_Segments</defName>
-    <label>Segs Sao.</label>
+    <label>Segments</label>
     <iconPath>UI/StyleCategories/USACIcon</iconPath><!-- 需要改成正确的UI路径 -->
     <soundOngoingRitual>RitualSustainer_Techist</soundOngoingRitual>
     <ritualVisualEffectDef>Techist</ritualVisualEffectDef>

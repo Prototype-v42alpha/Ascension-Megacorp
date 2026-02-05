@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
   <PawnRenderTreeDef>
-    <defName>HumanlikeMech</defName>
+    <defName>USAC_HumanlikeMech</defName>
     <root Class="PawnRenderNodeProperties_Parent">
       <debugLabel>Root</debugLabel>
       <tagDef>Root</tagDef>

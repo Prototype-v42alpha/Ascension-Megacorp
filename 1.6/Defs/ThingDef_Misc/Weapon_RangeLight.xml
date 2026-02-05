@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SoundDef>
+    <defName>USAC_Gun_Shot</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>9</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>USAC/guncast</clipPath>
+          </li>
+        </grains>
+        <pitchRange>1.0~1.5</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <ThingDef ParentName="BaseGunWithQuality" Name="USAC_BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+      <li>USAC_Gun</li>
+    </weaponTags>
+    <tradeTags>
+      <li>USAC_WeaponRanged</li>
+    </tradeTags>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <comps>
+      <li Class="CompProperties_Biocodable" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>USAC_Bullet_FullPowerRifle</defName>
+    <label>full power rifle bullet</label>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <stoppingPower>1.1</stoppingPower>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <speed>85</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <!-- ================================= Industrial ==================================== -->
+  <ThingDef ParentName="USAC_BaseGun">
+    <defName>USAC_Gun_AssaultRifle</defName>
+    <label>advanced auto rifle</label>
+    <description>An advanced precision rifle that strikes a good balance between accuracy, power and weight. Its full-power ammunition can effectively penetrate conventional bulletproof plates and cause effective damage, but its firing interval is relatively slow.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/USAC_Gun_AssaultRifle</texPath>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <weaponClasses>
+      <li>LongShots</li>
+    </weaponClasses>
+    <statBases>
+      <Mass>4.2</Mass>
+      <AccuracyTouch>0.69</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.91</AccuracyMedium>
+      <AccuracyLong>0.89</AccuracyLong>
+      <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>60</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>USAC_Bullet_FullPowerRifle</defaultProjectile>
+        <warmupTime>1.1</warmupTime>
+        <range>33.9</range>
+        <ticksBetweenBurstShots>14</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>USAC_Gun_Shot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>USAC_AR</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="USAC_BaseGun">
+    <defName>USAC_Gun_LightMachinegun</defName>
+    <label>Advanced LMG</label>
+    <description>A precision rifle that has been modified to provide sustained firepower through an air-cooled barrel and belt-fed ammunition. Its full-power rounds can effectively penetrate conventional ballistic protection, but it is bulky and requires squad cover.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/USAC_Gun_LightMachinegun</texPath>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <statBases>
+      <Mass>8.5</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.78</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.46</AccuracyLong>
+      <RangedWeapon_Cooldown>1.55</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>75</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>USAC_Bullet_FullPowerRifle</defaultProjectile>
+        <warmupTime>1.7</warmupTime>
+        <range>34.9</range>
+        <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>USAC_Gun_Shot</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>USAC_LMG</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="USAC_BaseGun">
+    <defName>USAC_Gun_MarksmanRifle</defName>
+    <label>advanced marksman rifle</label>
+    <description>A modified precision rifle designed for long-range burst fire, using full-power ammunition that can effectively penetrate conventional ballistic protection at long range, making it an ideal marksman rifle.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/USAC_Gun_MarksmanRifle</texPath>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <weaponClasses>
+      <li>LongShots</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <statBases>
+      <Mass>5</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.88</AccuracyShort>
+      <AccuracyMedium>0.98</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>65</Plasteel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>USAC_Bullet_FullPowerRifle</defaultProjectile>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <warmupTime>2.2</warmupTime>
+        <range>40.9</range>
+        <soundCast>USAC_Gun_Shot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>USAC_DMR</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>
